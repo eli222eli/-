@@ -1,25 +1,13 @@
-name: Automatic activation of the line system
+name: Test Schedule
 
 on:
   schedule:
-    - cron: '9 0 15-31 * 5'
-  workflow_dispatch:       # מאפשר הרצה ידנית דרך GitHub
+    - cron: '* * * * *'   # כל דקה
+  workflow_dispatch:       # מאפשר הרצה ידנית
 
 jobs:
-  run-script:
+  test-job:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Run main.py
-        run: python main.py
+      - name: Print message
+        run: echo "This is a test run at $(date -u)"
