@@ -2,7 +2,7 @@ name: Automatic activation of the line system
 
 on:
   schedule:
-    - cron: '1 1 15-31 * 5'  # יום שישי בשעה 10:00 UTC = 13:00 בישראל בקיץ
+    - cron: '3 0 15-31 * 5'  # יום שישי בשעה 10:00 UTC = 13:00 בישראל בקיץ
   workflow_dispatch:       # מאפשר הרצה ידנית דרך GitHub
 
 jobs:
