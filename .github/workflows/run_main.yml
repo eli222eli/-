@@ -2,7 +2,7 @@ name: Test Schedule
 
 on:
   schedule:
-    - cron: '* * * * *'   # כל דקה
+    - cron: '1 1 1 1 1'   # כל דקה
   workflow_dispatch:       # מאפשר הרצה ידנית
 
 jobs:
