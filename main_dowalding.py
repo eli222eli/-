@@ -50,10 +50,10 @@ def download_file(url, headers=None, filename='downloaded_file'):
 
 # דוגמה לשימוש:
 # פה יש למלא את הקישור לקובץ ההורדה
-url = 'https://www.emuparadise.me/roms/get-download.php?gid=155836&token=93ccd12ebc6fe8474cbc9636973b8ba1&mirror_available=true'
+url = 'https://www.emuparadise.me/roms/get-download.php?gid=155965&token=4c52e5ce232cd1967acb9a6a6c5aa448&mirror_available=true'
 # פה יש למלא את הקישור לאתר
 headers = {
-    'Referer': 'https://www.emuparadise.me/PSP_ISOs/FIFA_Soccer_(USA)/155836-download',
+    'Referer': 'https://www.emuparadise.me/PSP_ISOs/LEGO_Star_Wars_II_-_The_Original_Trilogy_(USA)/155965-download',
     'User-Agent': 'Mozilla/5.0'
 }
 
