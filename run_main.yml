@@ -1,0 +1,25 @@
+name: Automatic activation of the line system
+
+on:
+  schedule:
+    - cron: '0 10 1-14 * 5'  # יום שישי בשעה 10:00 UTC = 13:00 בישראל בקיץ
+  workflow_dispatch:       # מאפשר הרצה ידנית דרך GitHub
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run main.py
+        run: python main.py
