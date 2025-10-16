@@ -24,6 +24,9 @@ jobs:
     - name: Run script
       run: python main_dowalding.py
 
+    - name: Install dependencies
+      run: pip install beautifulsoup4
+
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
