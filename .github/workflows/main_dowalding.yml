@@ -1,60 +1,43 @@
 name: Run Python Script and Save Output
 
 on:
-  workflow_dispatch:   # מאפשר הרצה ידנית מה־Actions tab
-  push:
-    branches:
-      - main           # מפעיל גם על push ל־branch main (שנה אם ברצונך)
-
-permissions: read-all   # אופציונלי, מונע בעיות הרשאה בסיסיות
+  workflow_dispatch:
 
 jobs:
   run-python:
     runs-on: ubuntu-latest
-    env:
-      WEBSITE_URL: 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/versions'
-      DOWNLOAD_URL: 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/download'
-      PYTHONUNBUFFERED: '1'
-      TZ: 'Asia/Jerusalem'
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.8'
-          cache: 'pip'
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+        cache: 'pip'
 
-      - name: Install system deps (wget, curl)
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y wget curl
+    - name: Install dependencies
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install -y wget curl
 
-      - name: Install pip dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install --upgrade requests beautifulsoup4 urllib3
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install --upgrade requests beautifulsoup4 urllib3
 
-      - name: Debug: show HEAD for DOWNLOAD_URL
-        run: |
-          echo "=== HEAD with Referer ==="
-          curl -I -A "Mozilla/5.0" -e "${{ env.WEBSITE_URL }}" "${{ env.DOWNLOAD_URL }}" || true
-          echo "Saving small snapshot of page (for debugging)"
-          curl -s -L -A "Mozilla/5.0" -e "${{ env.WEBSITE_URL }}" "${{ env.DOWNLOAD_URL }}" -o /tmp/download_page.html || true
-          head -n 5 /tmp/download_page.html || true
+    - name: Run script
+      run: python -u main_dowalding.py
 
-      - name: Run Python script (main_dowalding.py)
-        run: python -u main_dowalding.py
-        env:
-          WEBSITE_URL: ${{ env.WEBSITE_URL }}
-          DOWNLOAD_URL: ${{ env.DOWNLOAD_URL }}
-          HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
-          HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
+    - name: Install dependencies
+      run: |
+        # השארתי את השורה הזו לשם שמירה על שם-שלב דומה למה שהייתה אצלך;
+        # היא לא הכרחית לאחר ההתקנה למעלה, אך משאירה גמישות.
+        pip install beautifulsoup4 || true
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: downloaded-file
-          path: gime_download.zip
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: downloaded-file
+        path: gime_download.zip
