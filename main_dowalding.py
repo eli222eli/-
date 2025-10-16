@@ -15,10 +15,10 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/versions'
+WEBSITE_URL = 'https://apk.dog/download?file_id=2985964/fish-tycoon-2-virtual-aquarium'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/download'
+DOWNLOAD_URL = 'https://apk.dog/go/?file_id=2985964&b=aHR0cHM6Ly8wNC5hcGsuZG9nL3N0b3JhZ2UvMTgvNjY5LzU0My82Njk1NDMvYXJtNjRfdjhhLWFybWVhYmlfdjdhLzI4NjdmZjFiNzc1YWJjNTQyMzM4NTI4YmNkMGU3YTYzL0Zpc2hfVHljb29uXzItMS4xMC4xNzEuYXBrP3M9NHY3djBqaUlMMmduMGYxeDMzb0NpdyZlPTE3NjA3NDE5MDkmbGFuZz1lbiZhcGtfaWQ9NTAwNjMwJnByZW1pdW1fc3BlZWQ9MA=='
 
 
 # --- פונקציות עזר חדשות/מעודכנות ---
