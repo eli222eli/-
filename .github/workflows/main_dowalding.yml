@@ -15,26 +15,14 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.8'
-        cache: 'pip'
-
-    - name: Install dependencies
-      run: |
-        sudo apt-get update -y
-        sudo apt-get install -y wget curl
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install --upgrade requests beautifulsoup4 urllib3
+        pip install requests
 
     - name: Run script
-      run: python -u main_dowalding.py
-
-    - name: Install dependencies
-      run: |
-        # השארתי את השורה הזו לשם שמירה על שם-שלב דומה למה שהייתה אצלך;
-        # היא לא הכרחית לאחר ההתקנה למעלה, אך משאירה גמישות.
-        pip install beautifulsoup4 || true
+      run: python main_dowalding.py
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
