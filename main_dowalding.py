@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://android-sdk-platform-tools.en.uptodown.com/windows/download/127117633'
+WEBSITE_URL = 'https://happymod.to/fish-tycoon-2-virtual-aquarium-unreleased-app-mod/com.ldw.fishtycoon2/'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://dw.uptodown.net/dwn/Q4DOuNEvg_nrBIu4qnBoHZR4EoeV8AzVrAsMRan5U_gYqemkJUtbvIHD-e1Jdv3AQJILZ_zfzw5QhzP3ff-GnGn1q2RkDGxhwPOi73RI0OGz2Q7N8BYquxYHE8lhapi5/uhm8nTpiWs9E1gKB_KWYJW7zrFB20WaQenDX8dFosKod3nQH04QAMclZ9yIgSxncc8X-2-y8TaacgVOV65-cufFESVRN-VkS2jSayUmt1AzOytArnMfYcG_fsrvpUjLi/Hka3yRrtmI_MHKZ8LwiAxfvszudJ-dNysf39TWbRBWvPqMpq1eADyJa_NR3H7otFi6YdLEmNp19F08PHZif5XU31viBD-mWIjSWJ2Bm88EuEhdUcfCqvb-uZiiAYz2ZL/android-sdk-platform-tools-adb-35-0-0.zip'
+DOWNLOAD_URL = 'https://spdn.poumod.com/HappyMod-3-2-5.apk'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
