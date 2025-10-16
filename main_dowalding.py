@@ -7,10 +7,10 @@ import tempfile
 import shutil
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://fish-tycoon-2.en.aptoide.com/versions'
+WEBSITE_URL = 'https://www.apkbe.com/down/com.ldw.fishtycoon2_1.10.14_free'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://pool.apk.aptoide.com/aptoide-web/com-aptoide-android-aptoidegames-532-71942280-71ff097177af863cb7f9ffbf8d4692fc.apk?apk_name=fish-tycoon-2'
+DOWNLOAD_URL = 'https://dl.apkbe.com/down.do/com.ldw.fishtycoon2_1.10.14_free?code=d0c65dcb3a722008036c0573fda383a9'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
