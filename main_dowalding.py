@@ -9,6 +9,10 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
 import zipfile
 
+# שינויים קטנים: imports לתמיכה ב-retries
+import re
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # הקישור לאתר שממנו הגענו (Referer)
 WEBSITE_URL = 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/versions'
@@ -17,8 +21,59 @@ WEBSITE_URL = 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishty
 DOWNLOAD_URL = 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/download'
 
 
+# --- פונקציות עזר חדשות/מעודכנות ---
+
+def create_session_with_retries(headers=None):
+    """
+    יוצר requests.Session עם headers ו-retries כדי לשמר עוגיות ולמנוע חסימות זמניות.
+    """
+    sess = requests.Session()
+    if headers:
+        sess.headers.update(headers)
+    retries = Retry(total=3, backoff_factor=1, status_forcelist=(429, 500, 502, 503, 504))
+    adapter = HTTPAdapter(max_retries=retries)
+    sess.mount("https://", adapter)
+    sess.mount("http://", adapter)
+    return sess
+
+
+def find_apkpure_direct_link(download_page_url, session):
+    """
+    מקבל URL של עמוד ההורדה (apkpure /download) ומחזיר את הקישור הישיר ל-d.apkpure.com
+    """
+    print(f'מגרד את עמוד ההורדה כדי למצוא קישור ישיר: {download_page_url}')
+    r = session.get(download_page_url, timeout=30)
+    r.raise_for_status()
+    html = r.text
+    soup = BeautifulSoup(html, 'html.parser')
+
+    # חפש href שמכיל d.apkpure.com (הקישור הישיר ל־APK/XAPK)
+    for tag in soup.find_all(href=True):
+        href = tag['href']
+        if 'd.apkpure.com' in href:
+            real = urljoin(download_page_url, href)
+            print('נמצא קישור ישיר להורדה:', real)
+            return real
+
+    # אפשרות נוספת: חפש לינקים עם טקסט "Click here" או כפתור הורדה
+    click_here = soup.find('a', string=re.compile(r'Click here|Click here to download|Download APK|Download XAPK', re.I))
+    if click_here and click_here.has_attr('href'):
+        real = urljoin(download_page_url, click_here['href'])
+        print('נמצא קישור בעזרת טקסט "Click here":', real)
+        return real
+
+    # ניסיון למצוא בקוד JS/meta - חיפוש גנרי בכל הטקסט
+    m = re.search(r'https?://d\.apkpure\.com[^\s\'"]+', html)
+    if m:
+        real = m.group(0)
+        print('נמצא קישור ישיר בתוך ה-HTML/JS:', real)
+        return real
+
+    raise Exception('לא נמצא קישור ישיר ל-d.apkpure.com בעמוד ההורדה')
+
+
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
-def download_file(url, headers=None, filename='downloaded_file'):
+def download_file(url, headers=None, filename='downloaded_file', session=None):
     """
     הורדה כללית:
     - אם ה-URL מחזיר content-type של HTML או נראה כמו דף (אין סיומת קובץ),
@@ -26,8 +81,12 @@ def download_file(url, headers=None, filename='downloaded_file'):
     - אחרת, יוריד קובץ רגיל ויעשה ZIP של הקובץ.
     החבילה הסופית תמיד תשמר בשם ZIP (filename אם מסתיים ב-.zip).
     """
+
     # קבע שם קובץ ZIP סופי (GitHub Action מצפה ל'gime_download.zip')
     zip_filename = filename if filename.lower().endswith('.zip') else 'gime_download.zip'
+
+    # וודא שיש session אם עדיף
+    sess = session if session is not None else create_session_with_retries(headers=headers)
 
     try:
         print(f'מתחיל הורדה מ: {url}')
@@ -40,10 +99,13 @@ def download_file(url, headers=None, filename='downloaded_file'):
                 print(f'הסרתי Referer לא תואם: {headers["Referer"]}')
                 headers = headers.copy()
                 del headers['Referer']
+                # אם session קיים - עדכן גם שם
+                if sess:
+                    sess.headers.pop('Referer', None)
 
         # ראשוני: בקשת HEAD לנסות לברר Content-Type (חסין לשרתים שלא תומכים)
         try:
-            head = requests.head(url, headers=headers, allow_redirects=True, timeout=15)
+            head = sess.head(url, allow_redirects=True, timeout=15)
             content_type = head.headers.get('content-type', '').lower()
         except Exception:
             content_type = ''
@@ -97,7 +159,7 @@ def download_file(url, headers=None, filename='downloaded_file'):
             # אם אין wget או הוא נכשל — נבצע fallback מבוסס BeautifulSoup (פשוט אך עובד טוב לרוב הדפים)
             print('מבצע fallback: הורדת HTML ו־משאבים באמצעות Python + BeautifulSoup.')
 
-            resp = requests.get(url, headers=headers, timeout=30)
+            resp = sess.get(url, timeout=30)
             resp.raise_for_status()
             html = resp.text
             soup = BeautifulSoup(html, 'html.parser')
@@ -117,7 +179,7 @@ def download_file(url, headers=None, filename='downloaded_file'):
                 if abs_url in downloaded_map:
                     return downloaded_map[abs_url]
                 try:
-                    r = requests.get(abs_url, headers=headers, stream=True, timeout=20)
+                    r = sess.get(abs_url, stream=True, timeout=20)
                     r.raise_for_status()
                     # שם הקובץ שמור: ננסה לשמור את שם הבסיס של הנתיב, אם חסר - נייצר שם
                     path = urlparse(abs_url).path
@@ -137,9 +199,6 @@ def download_file(url, headers=None, filename='downloaded_file'):
                     return downloaded_map[abs_url]
                 except Exception as e:
                     # לא הצלחנו להוריד את המשאב — נמשיך בלי להעתיקו
-                    # (הדף עדיין ישמור את הקישור החיצוני)
-                    # הדפס אזהרה קצרה
-                    # print(f'לא הורד משאב {abs_url}: {e}')
                     return None
 
             # עבור כל תג רלוונטי — הורד את המשאב והחלף הקישורים ליחסי
@@ -174,7 +233,7 @@ def download_file(url, headers=None, filename='downloaded_file'):
 
         else:
             # טיפול בקבצים רגילים — מבוסס על הקוד הקיים (stream)
-            with requests.get(url, headers=headers, stream=True, timeout=30) as response:
+            with sess.get(url, stream=True, timeout=30) as response:
                 response.raise_for_status()
 
                 print(f'סטטוס תשובה: {response.status_code}')
@@ -248,21 +307,32 @@ def download_file(url, headers=None, filename='downloaded_file'):
         return False
 
 
-
-# דוגמה לשימוש:
-# פה יש למלא את הקישור לקובץ ההורדה
+# דוגמה לשימוש (חלק זה לא מחקתי — רק עדכנתי לקרוא ל-find_apkpure_direct_link לפני ההורדה):
 url = DOWNLOAD_URL
 # פה יש למלא את הקישור לאתר
 headers = {
     'Referer': WEBSITE_URL,
-    'User-Agent': 'Mozilla/5.0'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
 }
 
 # שם הקובץ חייב להיות בדיוק gime_download.zip כי זה מה שה-GitHub Action מצפה לו
 filename = 'gime_download.zip'
 
-# הרצת הפונקציה להורדה
-if download_file(url, headers, filename):
+# צור session שישמש לכל הבקשות
+session = create_session_with_retries(headers=headers)
+
+# השינוי: קודם נסרוק את העמוד כדי למצוא את ה-link הישיר (d.apkpure.com)
+try:
+    real_download_url = find_apkpure_direct_link(DOWNLOAD_URL, session)
+except Exception as e:
+    print('לא הצלחתי למצוא קישור ישיר בעמוד ההורדה:', e)
+    print('נסה להריץ מקומית או לבדוק אם ה-IP של ה-runner חסום.')
+    sys.exit(1)
+
+# הרצת הפונקציה להורדה (כעת מעבירים את ה-session)
+if download_file(real_download_url, headers, filename, session=session):
     print('ההורדה והמרה ל-ZIP הסתיימו בהצלחה!')
 else:
     print('אירעה שגיאה בתהליך ההורדה או ההמרה ל-ZIP')
