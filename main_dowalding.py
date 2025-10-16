@@ -8,7 +8,7 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://happymod.to/fish-tycoon-2-virtual-aquarium-unreleased-app-mod/com.ldw.fishtycoon2/'
+WEBSITE_URL = 'https://happymod.to/fish-tycoon-2-virtual-aquarium-unreleased-app-mod/com.ldw.fishtycoon2/download.html'
 
 
 # הקישור לקובץ ההורדה
