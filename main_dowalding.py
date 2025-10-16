@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://happymod.to/fish-tycoon-2-virtual-aquarium-unreleased-app-mod/com.ldw.fishtycoon2/download.html'
+WEBSITE_URL = 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/versions'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://spdn.poumod.com/HappyMod-3-2-5.apk'
+DOWNLOAD_URL = 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/download'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
