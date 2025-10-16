@@ -7,10 +7,10 @@ import tempfile
 import shutil
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://apk.dog/download?file_id=2985964/fish-tycoon-2-virtual-aquarium'
+WEBSITE_URL = 'https://fish-tycoon-2.en.aptoide.com/versions'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://apk.dog/go/?file_id=2985964&b=aHR0cHM6Ly8wNC5hcGsuZG9nL3N0b3JhZ2UvMTgvNjY5LzU0My82Njk1NDMvYXJtNjRfdjhhLWFybWVhYmlfdjdhLzI4NjdmZjFiNzc1YWJjNTQyMzM4NTI4YmNkMGU3YTYzL0Zpc2hfVHljb29uXzItMS4xMC4xNzEuYXBrP3M9NHY3djBqaUlMMmduMGYxeDMzb0NpdyZlPTE3NjA3NDE5MDkmbGFuZz1lbiZhcGtfaWQ9NTAwNjMwJnByZW1pdW1fc3BlZWQ9MA=='
+DOWNLOAD_URL = 'https://pool.apk.aptoide.com/aptoide-web/com-aptoide-android-aptoidegames-532-71942280-71ff097177af863cb7f9ffbf8d4692fc.apk?apk_name=fish-tycoon-2'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
