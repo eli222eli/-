@@ -1,17 +1,20 @@
 name: Run Python Script and Save Output
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:   # מאפשר הרצה ידנית מה־Actions tab
+  push:
+    branches:
+      - main           # מפעיל גם על push ל־branch main (שנה אם ברצונך)
+
+permissions: read-all   # אופציונלי, מונע בעיות הרשאה בסיסיות
 
 jobs:
   run-python:
     runs-on: ubuntu-latest
-
-    # משתנים שימושיים (ניתנים לשינוי)
     env:
       WEBSITE_URL: 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/versions'
       DOWNLOAD_URL: 'https://apkpure.com/fish-tycoon-2-virtual-aquarium/com.ldw.fishtycoon2/download'
-      PYTHONUNBUFFERED: '1'   # מדפיס לוגים בזמן אמת
+      PYTHONUNBUFFERED: '1'
       TZ: 'Asia/Jerusalem'
 
     steps:
@@ -24,7 +27,7 @@ jobs:
           python-version: '3.8'
           cache: 'pip'
 
-      - name: Install system dependencies (wget, curl)
+      - name: Install system deps (wget, curl)
         run: |
           sudo apt-get update -y
           sudo apt-get install -y wget curl
@@ -34,24 +37,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install --upgrade requests beautifulsoup4 urllib3
 
-      - name: Debug: show HTTP response for DOWNLOAD_URL (no Referer / with Referer)
+      - name: Debug: show HEAD for DOWNLOAD_URL
         run: |
-          echo "=== HEAD without Referer ==="
-          curl -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" "${{ env.DOWNLOAD_URL }}" || true
           echo "=== HEAD with Referer ==="
-          curl -I -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" -e "${{ env.WEBSITE_URL }}" "${{ env.DOWNLOAD_URL }}" || true
-          echo "=== GET (follow redirects) with Referer (short output) ==="
-          curl -s -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" -e "${{ env.WEBSITE_URL }}" "${{ env.DOWNLOAD_URL }}" -o /tmp/download_page.html || true
-          echo "Saved page to /tmp/download_page.html (artifact will not include it). Showing first 200 chars:"
-          head -c 200 /tmp/download_page.html || true
+          curl -I -A "Mozilla/5.0" -e "${{ env.WEBSITE_URL }}" "${{ env.DOWNLOAD_URL }}" || true
+          echo "Saving small snapshot of page (for debugging)"
+          curl -s -L -A "Mozilla/5.0" -e "${{ env.WEBSITE_URL }}" "${{ env.DOWNLOAD_URL }}" -o /tmp/download_page.html || true
+          head -n 5 /tmp/download_page.html || true
 
-      - name: Run script
-        # -u כדי לקבל stdout/stderr מנותב בזמן אמת; מעביר env שימושיים וסודות פרוקסי אם קיימים
+      - name: Run Python script (main_dowalding.py)
         run: python -u main_dowalding.py
         env:
           WEBSITE_URL: ${{ env.WEBSITE_URL }}
           DOWNLOAD_URL: ${{ env.DOWNLOAD_URL }}
-          # אופציונלי — אם רוצה לנסות דרך פרוקסי (הגדר בסודות של הריפו)
           HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
           HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
 
