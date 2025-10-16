@@ -7,10 +7,10 @@ import tempfile
 import shutil
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://www.apkbe.com/down/com.ldw.fishtycoon2_1.10.14_free'
+WEBSITE_URL = 'https://github.com/eli222eli/-/actions/runs/18577866900'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://dl.apkbe.com/down.do/com.ldw.fishtycoon2_1.10.14_free?code=d0c65dcb3a722008036c0573fda383a9'
+DOWNLOAD_URL = 'https://github.com/eli222eli/-/actions/runs/18577866900/artifacts/4294493967'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
