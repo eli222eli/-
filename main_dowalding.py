@@ -10,7 +10,7 @@ import shutil
 WEBSITE_URL = 'https://www.prog.co.il/threads/%D7%94%D7%95%D7%A8%D7%93%D7%AA-apk.421720/'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://www.jumbomail.me/he/Downloads.aspx?sid=4F6F3862364F4E76493248464B3342347436653838673D3D'
+DOWNLOAD_URL = 'https://send.magicode.me/send-file/file/35ddb9b94816472e010d6e705b9c302d3b118b71/download'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
