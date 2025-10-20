@@ -7,10 +7,10 @@ import tempfile
 import shutil
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://apkcombo.com/temo-3/com.techem.temodokuapp/download/apk'
+WEBSITE_URL = 'https://www.pgyer.com/apk/apk/uk.co.rpssoftware.temo.hippoflow/downloading'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://apkcombo.com/d?u=aHR0cHM6Ly9kb3dubG9hZC5wdXJlYXBrLmNvbS9iL1hBUEsvWTI5dExuUmxZMmhsYlM1MFpXMXZaRzlyZFdGd2NGOHhNalV5TVRNM05EZ3hYMkZrT0dFNE5HSmk/YXMyPWRjYWJiYzQ5NWM0NmE5ODUzNTM5OWRjMGE0ZjIwZTIzNmFkMGVlYzkmaz1hNzViZDYwMDJiOTM4ZDAxMmQ5ZjA1ZDZiMjcyZGUxODZhZDBlZWM5Jl9wPVkyOXRMblJsWTJobGJTNTBaVzF2Wkc5cmRXRndjQSZjPTElN0NCVVNJTkVTUyU3Q2IybGtQVGttWkdWMlBWUmxZMmhsYlNVeU1FVnVaWEpuZVNVeU1GTmxjblpwWTJWekpUSXdKVEl3UjIxaVNDWjBQWGhoY0dzbWN6MDJNRFU0T0RBeU9TWjJiajB4TGpJMUxqSXhMak0zTkRneExXMWhjM1JsY2laMll6MHhNalV5TVRNM05EZ3gmX2ZuPVZHVk5ieXN6WHpFdU1qVXVNakV1TXpjME9ERXRiV0Z6ZEdWeVgyRndhMk52YldKdkxtTnZiUzU0WVhCcg==&fp=634eb4a48bbcfd76f2de506f2eb496d7&ip=31.154.27.134&package_name=com.techem.temodokuapp&lang=en'
+DOWNLOAD_URL = 'https://storage.apk.live/uk.co.rpssoftware.temo.hippoflow--128.xapk'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
