@@ -7,10 +7,10 @@ import tempfile
 import shutil
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://www.pgyer.com/apk/apk/uk.co.rpssoftware.temo.hippoflow/downloading'
+WEBSITE_URL = 'https://www.prog.co.il/threads/%D7%94%D7%95%D7%A8%D7%93%D7%AA-apk.421720/'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://storage.apk.live/uk.co.rpssoftware.temo.hippoflow--128.xapk'
+DOWNLOAD_URL = 'https://www.jumbomail.me/he/Downloads.aspx?sid=4F6F3862364F4E76493248464B3342347436653838673D3D'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
