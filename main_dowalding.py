@@ -7,10 +7,10 @@ import tempfile
 import shutil
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://www.emuparadise.me/PSP_ISOs/Gran_Turismo_(v2)_(Europe)/158764-download'
+WEBSITE_URL = 'https://www.emuparadise.me/PSP_ISOs/Medal_of_Honor_-_Heroes_2_(Europe)/157392-download'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://www.emuparadise.me/roms/get-download.php?gid=158764&token=42d985bb5f3e104a322aa5dd3b066213&mirror_available=true'
+DOWNLOAD_URL = 'https://www.emuparadise.me/roms/get-download.php?gid=157392&token=a1f4615b44355dbe913b870d5d4e9cd2&mirror_available=true'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
