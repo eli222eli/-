@@ -7,10 +7,10 @@ import tempfile
 import shutil
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://www.prog.co.il/threads/%D7%94%D7%95%D7%A8%D7%93%D7%AA-apk.421720/'
+WEBSITE_URL = 'https://www.emuparadise.me/PSP_ISOs/Gran_Turismo_(v2)_(Europe)/158764-download'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://send.magicode.me/send-file/file/35ddb9b94816472e010d6e705b9c302d3b118b71/download'
+DOWNLOAD_URL = 'https://www.emuparadise.me/roms/get-download.php?gid=158764&token=42d985bb5f3e104a322aa5dd3b066213&mirror_available=true'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
