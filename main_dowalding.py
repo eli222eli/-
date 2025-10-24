@@ -7,10 +7,10 @@ import tempfile
 import shutil
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://www.emuparadise.me/PSP_ISOs/Medal_of_Honor_-_Heroes_2_(Europe)/157392-download'
+WEBSITE_URL = 'https://www.emuparadise.me/PSP_ISOs/Monster_Hunter_Freedom_Unite_(USA)/157920'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://www.emuparadise.me/roms/get-download.php?gid=157392&token=a1f4615b44355dbe913b870d5d4e9cd2&mirror_available=true'
+DOWNLOAD_URL = 'https://www.emuparadise.me/PSP_ISOs/Monster_Hunter_Freedom_Unite_(USA)/157920-download'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
