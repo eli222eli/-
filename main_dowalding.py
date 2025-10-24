@@ -7,10 +7,10 @@ import tempfile
 import shutil
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://www.emuparadise.me/PSP_ISOs/Monster_Hunter_Freedom_Unite_(USA)/157920'
+WEBSITE_URL = 'https://www.emuparadise.me/PSP_ISOs/Monster_Hunter_Freedom_Unite_(USA)/157920-download'
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://www.emuparadise.me/PSP_ISOs/Monster_Hunter_Freedom_Unite_(USA)/157920-download'
+DOWNLOAD_URL = 'https://www.emuparadise.me/roms/get-download.php?gid=157920&token=dc5f279049b9b8c699ef08357c81dfec&mirror_available=true'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
