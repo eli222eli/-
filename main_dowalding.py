@@ -6,11 +6,13 @@ import subprocess
 import tempfile
 import shutil
 
+
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://www.emuparadise.me/PSP_ISOs/Monster_Hunter_Freedom_Unite_(USA)/157920-download'
+WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/a0533151881/ai-tools/generate?sessionId=19291f77-7733-4513-b533-f3b0f0cd7f50&mode=tools'
+
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://www.emuparadise.me/roms/get-download.php?gid=157920&token=dc5f279049b9b8c699ef08357c81dfec&mirror_available=true'
+DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/cc5db508-9866-46f2-ab77-623a72d2e9fb.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYWFhMjcwZmVhMmVjNDgzNiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2MzUxMDQwMH0.SCzR7tVy1YSFnoNr_t14YYTtj47bl_Dp9yu15mbY2mY&download=Gen-4+Turbo+%D7%AA%D7%95%D7%9B%D7%9C+%D7%9C%D7%99%D7%A6%D7%95%D7%A8+%D7%9C%D7%99+%D7%A1%D7%A8%D7%98%D7%95%D7%9F+%D7%A9%D7%9C+5+%D7%A9%D7%A0%D7%99%D7%95%D7%AA+%D7%A9%D7%9C+%D7%91%D7%A8%D7%95%D7%95%D7%96+%D7%91%D7%9E%D7%99%D7%99%D7%9D+3991545688.mp4'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
@@ -97,7 +99,7 @@ def download_file(url, headers=None, filename='downloaded_file'):
             try:
                 print('\nמכין קובץ ZIP...')
                 zip_filename = 'gime_download.zip'
-
+                
                 # שימוש ב-zip ישירות על הקובץ
                 if os.name == 'nt':  # Windows
                     # ב-Windows נשתמש ב-powershell
@@ -109,18 +111,18 @@ def download_file(url, headers=None, filename='downloaded_file'):
 
                 # הרצת פקודת הארכוב
                 result = subprocess.run(zip_cmd, capture_output=True, text=True)
-
+                
                 if result.returncode != 0:
                     print(f'❌ שגיאה ביצירת קובץ ZIP:')
                     print(f'פלט שגיאה: {result.stderr}')
                     print(f'פלט סטנדרטי: {result.stdout}')
                     return False
-
+                
                 # בדיקה אם קובץ ה-ZIP נוצר בהצלחה
                 if not os.path.exists(zip_filename):
                     print('❌ קובץ ה-ZIP לא נוצר בהצלחה')
                     return False
-
+                
                 # מחיקת הקובץ המקורי
                 if os.path.exists(filename):
                     os.remove(filename)
