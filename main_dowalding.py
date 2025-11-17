@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/a0533151881/ai-tools/generate?sessionId=19291f77-7733-4513-b533-f3b0f0cd7f50&mode=tools'
+WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/a0533151818/ai-tools/generate?sessionId=cfb3127d-481b-4b6c-b99b-ee9d613a4127'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/cc5db508-9866-46f2-ab77-623a72d2e9fb.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYWFhMjcwZmVhMmVjNDgzNiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2MzUxMDQwMH0.SCzR7tVy1YSFnoNr_t14YYTtj47bl_Dp9yu15mbY2mY&download=Gen-4+Turbo+%D7%AA%D7%95%D7%9B%D7%9C+%D7%9C%D7%99%D7%A6%D7%95%D7%A8+%D7%9C%D7%99+%D7%A1%D7%A8%D7%98%D7%95%D7%9F+%D7%A9%D7%9C+5+%D7%A9%D7%A0%D7%99%D7%95%D7%AA+%D7%A9%D7%9C+%D7%91%D7%A8%D7%95%D7%95%D7%96+%D7%91%D7%9E%D7%99%D7%99%D7%9D+3991545688.mp4'
+DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/810b1a3a-3f67-4699-a9cd-9ba11d71c16a.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiM2IwNGZkOGIwNWQ3M2VmYiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2MzUxMDQwMH0.TtTv-nXC1Z2cFAwa4_69elYIipG5T0RC5pgsXRrDAtw&download=Gen-4+Turbo+%D7%94%D7%A2%D7%9C%D7%AA%D7%99+%D7%AA%D7%9E%D7%95%D7%A0%D7%94+%D7%A9%D7%9C+%D7%90%D7%A8%D7%95%D7%9F+%D7%A1%D7%A4%D7%A8%D7%99%D7%9D+%D7%95%D7%90%D7%A0%D7%99+%D7%A8%D7%95%D7%A6%D7%94+%D7%A9%D7%AA%D7%A9%D7%9E%D7%95%D7%A8+%D7%91%D7%9E%D7%93%D7%95%D7%99%D7%99%D7%A7+%D7%A2%D7%9C+%D7%94%D7%9E%D7%99%D7%93%D7%95%D7%AA+%D7%A9%D7%9C%D7%95+%D7%90%D7%91%D7%9C+%D7%AA%D7%A9%D7%9C%D7%91+%D7%90%D7%95%D7%AA%D7%95+%D7%A2%D7%9D+%D7%A1%D7%A8%D7%98%D7%95%D7%9F+%D7%A9%D7%9E%D7%A6%D7%99%D7%92+%D7%A9%D7%99%D7%9E%D7%95%D7%A9+%D7%91%D7%90%D7%A8%D7%95%D7%9F+%D7%A4%D7%AA%D7%99%D7%97%D7%AA+%D7%95%D7%99%D7%98%D7%A8%D7%99%D7%A0%D7%94+%D7%A4%D7%AA%D7%99%D7%97%D7%AA+%D7%93%D7%9C%D7%AA%D7%95%D7%AA+%D7%94.mp4'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
