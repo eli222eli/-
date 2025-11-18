@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/a0533151818/ai-tools/generate?sessionId=cfb3127d-481b-4b6c-b99b-ee9d613a4127&mode=tools'
+WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/a0533151881/ai-tools/generate?sessionId=bf8aff45-4933-4b2a-8bd5-84d0ad8ffb06&mode=tools'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/20c892e6-759e-4930-9245-d98175ed9bd2.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYWM1MjkxNDg4N2FhYTQ3YSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2MzUxMDQwMH0.UDenH3gIrIh5jz885_hh5KWvPZ0BdhDwUJwJdo4Z2sM&download=Gen-4+Turbo+%D7%94%D7%A2%D7%9C%D7%AA%D7%99+%D7%AA%D7%9E%D7%95%D7%A0%D7%94+%D7%A9%D7%9C+%D7%90%D7%A8%D7%95%D7%9F+%D7%A1%D7%A4%D7%A8%D7%99%D7%9D+%D7%95%D7%90%D7%A0%D7%99+%D7%A8%D7%95%D7%A6%D7%94+%D7%A9%D7%AA%D7%A9%D7%9E%D7%95%D7%A8+%D7%91%D7%9E%D7%93%D7%95%D7%99%D7%99%D7%A7+%D7%A2%D7%9C+%D7%94%D7%9E%D7%99%D7%93%D7%95%D7%AA+%D7%A9%D7%9C%D7%95+%D7%90%D7%91%D7%9C+%D7%AA%D7%A9%D7%9C%D7%91++%D7%90%D7%AA+%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%94+%D7%A2%D7%9D+%D7%A1%D7%A8%D7%98%D7%95%D7%9F+%D7%A9%D7%9E%D7%A6%D7%99%D7%92+%D7%A9%D7%99%D7%9E%D7%95%D7%A9+%D7%91%D7%90%D7%A8%D7%95%D7%9F+%D7%A4%D7%AA%D7%99%D7%97%D7%AA+%D7%95%D7%99%D7%98%D7%A8%D7%99%D7%A0%D7%94+%D7%A4%D7%AA%D7%99%D7%97%D7%AA+%D7%93%D7%9C.mp4'
+DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/9ea8c1fa-55d1-4776-8530-df3390ca84e8.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMWM2MjRiMmYwMzFlNDgxNyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2MzU5NjgwMH0.RSUHbqkCJUfzbtTwvFsSWtIK8s7x5H696FFOoz1iAJE&download=Gen-4+Turbo+Give+me+a+video+of+the+person+in+the+picture%2C+the+adult+%28not+the+child+on+the+left%29+talking+to+Trump+%28the+President+of+the+United+States%29+and+shaking+his+hand+against+the+backdrop+of+the+W.mp4'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
