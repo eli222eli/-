@@ -12,7 +12,7 @@ WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/a0533151881/ai-tools/g
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/2a67dcc4-43b7-4d60-a7ae-9fe9d35626f9.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODA2ODRlN2M0YjQyYjM1YyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2MzU5NjgwMH0.S_aIH3Z6O9XfN_AYpFLRMDC887eRJt8lXdfrpYWZ78E&download=Gen-4+Turbo+Give+me+a+video+of+the+person+in+the+picture+I+uploaded+to+you+%28not+another+person%29+The+adult+on+the+right+%28not+the+child+on+the+left%29+is+talking+to+Trump+%28the+President+of+the+United+Sta.mp4'
+DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/b4e2cb4f-73fa-4605-abb3-8fa5a68bb37b.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZTM4Njk4ODA1YTE4ZWI5OSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2MzU5NjgwMH0.Ch13uXxIxpN2L188zZULpM4iYNMOtrOHxtXfTwFqMK0&download=Gen-4+Turbo+%D7%AA%D7%9F+%D7%9C%D7%99+%D7%A1%D7%A8%D7%98%D7%95%D7%9F+%D7%A9%D7%9C+%D7%A9%D7%A0%D7%99+%D7%94%D7%90%D7%A0%D7%A9%D7%99%D7%9D+%D7%A9%D7%91%D7%AA%D7%9E%D7%95%D7%A0%D7%94+%D7%A9%D7%A6%D7%A8%D7%A4%D7%AA%D7%99+%D7%9E%D7%93%D7%91%D7%A8%D7%99%D7%9D+%D7%90%D7%97%D7%93+%D7%A2%D7%9D+%D7%94%D7%A9%D7%A0%D7%99++3766992123.mp4'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
