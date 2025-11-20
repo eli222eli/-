@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/b0548466645/ai-tools/generate?mode=tools&sessionId=ff14b1a2-602e-4212-b79e-7f00d4b1c1f9'
+WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/a0548466646/ai-tools/generate?mode=tools&sessionId=721df8a6-72d8-4f7f-a992-0e0d852ae14e'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/9067a70b-8e75-44c5-8448-d2f41acc6596.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNTNkOThjODhlMDE2NDM2NSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2MzY4MzIwMH0.d3zDdGyc1tUQX0buOMeD3hGgHw5BpebFB899PoUrExo&download=Gen-4+Turbo+%D7%AA%D7%99%D7%A6%D7%95%D7%A8+%D7%9C%D7%99+%D7%A1%D7%A8%D7%98%D7%95%D7%9F+%D7%9E%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%94+%D7%A9%D7%91%D7%97%D7%A8%D7%AA%D7%99+%D7%A9%D7%94%D7%99%D7%9C%D7%93+%D7%9E%D7%9C%D7%98%D7%A3+%D7%90%D7%AA+%D7%94%D7%A8%D7%A2%D7%9E%D7%94+%D7%A9%D7%9C+%D7%94%D7%90%D7%A8%D7%99%D7%94+%D7%95%D7%94%D7%90%D7%A8%D7%99%D7%94+%D7%A0%D7%94%D7%A0%D7%94+%D7%95%D7%9E%D7%A0%D7%A2%D7%A8+%D7%90%D7%AA+%D7%94%D7%A8%D7%90%D7%A9+%D7%9E%D7%97%D7%9E%D7%AA+%D7%94%D7%94%D7%A0%D7%90%D7%94+%D7%AA%D7%A9%D7%9E%D7%95%D7%A8+%D7%A2%D7%9C+%D7%AA%D7%95%D7%95%D7%99+%D7%A4%D7%A0%D7%99%D7%9D+%D7%9B%D7%9E%D7%94+%D7%A9%D7%99%D7%95%D7%AA%D7%A8+%D7%9E%D7%93%D7%95%D7%99%D7%A7%D7%99%D7%9D+.m.mp4'
+DOWNLOAD_URL = 'https://images.streaming-inference.models.runwayml.cloud/streams-server-cpu/raw_image/commands/compressed_image/result.jpg?input_image=https%3A%2F%2Fdnznrvs05pmza.cloudfront.net%2F6e519b5f-47f4-4c1e-8da5-d78b898e4fb2.png%3F_jwt%3DeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNWFkOTAzMTBlY2FkMzY3YSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2Mzc2OTYwMH0.MCYcMRP4A2bOzdP52iSTbgJn6ouGofA4qD6B8CsrPrY&input_max_width=1920&input_max_height=1920&hardware=cpu&priority=high&tok=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTAzMjE5NDMsImVtYWlsIjoiYTA1NDg0NjY2NDZAZ21haWwuY29tIiwiZXhwIjoxNzY2MjY1NTI2Ljk1OSwiaWF0IjoxNzYzNjczNTI2Ljk1OSwic3NvIjpmYWxzZX0.fo94WuYq4ga_EYNl4bROXgRq3O023STuHx76LJ8RlHc'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
