@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/a0548466646/ai-tools/generate?mode=tools&sessionId=de39ecdf-403b-4ec1-a947-83cae811a930'
+WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/tamar0548572595/ai-tools/generate?sessionId=12c44fe9-d62f-4f0e-aa78-40cf9e7fa047'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/5d2dc1f9-b13f-4399-a1bb-84329ec737c9.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNmQ1MjkwMDgzMjVjNjkwYyIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2Mzc2OTYwMH0.g4_zF6R0QXSwxKj77hfBdamxt7-nku7eA-9JM5Smjio&download=Gen-4+Turbo+%D7%AA%D7%9F+%D7%9C%D7%99+%D7%95%D7%99%D7%93%D7%90%D7%95+%D7%9E%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%94+%D7%A9%D7%94%D7%A2%D7%9C%D7%AA%D7%99+%D7%9C%D7%9A%2C+%D7%A9%D7%99%D7%A8%D7%90%D7%95+%D7%90%D7%AA+%D7%94%D7%91%D7%97%D7%95%D7%A8+%D7%A8%D7%95%D7%9B%D7%91+%D7%A2%D7%9C+%D7%94%D7%A0%D7%9E%D7%A8%2C+%D7%AA%D7%A9%D7%AA%D7%93%D7%9C+%D7%9C%D7%A9%D7%9E%D7%95%D7%A8+%D7%A2%D7%9C+%D7%93%D7%99%D7%95%D7%A7+%D7%91%D7%AA%D7%95%D7%95%D7%99+%D7%94%D7%A4%D7%A0%D7%99%D7%9D+%D7%A9%D7%9C+%D7%94%D7%91%D7%97%D7%95%D7%A8+2959141902.mp4'
+DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/62292b7c-6a59-441e-a2b6-ba7728274544.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMzA4YzkwN2MzNTFhNjVkYiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2NDQ2MDgwMH0.f9ehzSc2srtvSU-gF3ZZ66IOZlTbo6ANbywilKtigqM&download=Gen-4+Turbo+%D7%AA%D7%9F+%D7%9C%D7%99+%D7%9E%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%94+%D7%A9%D7%A0%D7%AA%D7%AA%D7%99+%D7%9C%D7%9A+%D7%A1%D7%A8%D7%98%D7%95%D7%9F+%D7%A9%D7%9C+%D7%90%D7%A7%D7%95%D7%95%D7%A8%D7%99%D7%95%D7%9D+%D7%AA%D7%95%D7%A1%D7%A1+%D7%95%D7%9E%D7%9C%D7%90+%D7%97%D7%99%D7%99%D7%9D+%D7%94%D7%93%D7%92%D7%99%D7%9D+%D7%A9%D7%91%D7%AA%D7%9E%D7%95%D7%A0%D7%94+%D7%94%D7%9D+%D7%93%D7%99%D7%A1%D7%A7%D7%95%D7%A1%D7%99%D7%9D+%D7%94%D7%9D+%D7%A2%D7%9D+%D7%90%D7%95%D7%A4%D7%99+%D7%A2%D7%93%D7%99%D7%9F+%D7%AA%D7%9F+%D7%AA%D7%A0%D7%95%D7%A2%D7%94+%D7%9C%D7%93%D7%92%D7%99%D7%9D+%D7%95%D7%AA%D7%A4%D7%AA%D7%97+%D7%90%D7%AA+%D7%96%D7%94+%D7%9B%D7%A8%D7%A6%D7%95%D7%A0%D7%9A+111.m.mp4'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
