@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://app.runwayml.com/video-tools/teams/a0548466646/ai-tools/generate?mode=tools&sessionId=8faa9943-76b8-41af-a358-64294642fa2a'
+WEBSITE_URL = 'https://chatgpt.com/c/692b7808-4074-8331-91fb-8cb327ff29bc'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://dnznrvs05pmza.cloudfront.net/7175f8f6-bdc8-4812-9e63-4394e47cd4e7.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiODQyMWVjYTliMDFhNjdhYSIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc2NDU0NzIwMH0.gaDZGDbbLrBrOpjtO7wym1jCUb00bGh1FO4oQuSbUtM&download=Gen-4+Turbo+%D7%90%D7%A0%D7%99+%D7%A8%D7%95%D7%A6%D7%94+%D7%A9%D7%AA%D7%99%D7%A7%D7%97+%D7%90%D7%AA+%D7%94%D7%AA%D7%9E%D7%95%D7%A0%D7%94+%D7%A9%D7%A0%D7%AA%D7%AA%D7%99+%D7%9C%D7%9A+%D7%A9%D7%A8%D7%95%D7%90%D7%99%D7%9D+%D7%91%D7%97%D7%95%D7%A8+%D7%A9%D7%A6%D7%95%D7%A0%D7%97+%D7%9E%D7%9E%D7%A1%D7%95%D7%A7+%D7%90%D7%A0%D7%99+%D7%A8%D7%95%D7%A6%D7%94+%D7%A9%D7%AA%D7%99%D7%A6%D7%95%D7%A8+%D7%A1%D7%A8%D7%98%D7%95%D7%9F+%D7%A9%D7%9E%D7%A8%D7%90%D7%94+%D7%91%D7%A9%D7%9C%D7%91+%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%9F+%282+%D7%A9%D7%A0%D7%99%D7%95%D7%AA+%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%95%D7%AA%29+%D7%90%D7%99%D7%9A+%D7%94%D7%91%D7%97%D7%95%D7%A8+%D7%A7%D7%95%D7%A4%D7%A5+%D7%9E%D7%94.m.mp4'
+DOWNLOAD_URL = 'https://chatgpt.com/backend-api/estuary/content?id=file_000000002b547230af30328744956154&ts=490127&p=fs&cid=1&sig=e12044092fc61be43897e1069d10292a15dcd5e684e5c3646101874110e8284b&v=0'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
