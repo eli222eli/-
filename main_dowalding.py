@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://huggingface.co/turboleg/Llama-3.1-8B-Instruct-Q4_K_M-GGUF/tree/main'
+WEBSITE_URL = 'https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-gguf'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://cas-bridge.xethub.hf.co/xet-bridge-us/672ac8fbed90dbcd99f9d6d5/946faf1b934f034c25ef957451dc4a4b1357c44cee0f60a85db061ef1a056cad?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20251204%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251204T004337Z&X-Amz-Expires=3600&X-Amz-Signature=82f8332124839f51b8380de0726c5615f88a658b3e4bf89649112e5ce683c94c&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27llama-3.1-8b-instruct-q4_k_m-imat.gguf%3B+filename%3D%22llama-3.1-8b-instruct-q4_k_m-imat.gguf%22%3B&x-id=GetObject&Expires=1764812617&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc2NDgxMjYxN319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82NzJhYzhmYmVkOTBkYmNkOTlmOWQ2ZDUvOTQ2ZmFmMWI5MzRmMDM0YzI1ZWY5NTc0NTFkYzRhNGIxMzU3YzQ0Y2VlMGY2MGE4NWRiMDYxZWYxYTA1NmNhZCoifV19&Signature=knr8qdRFnftaAS3IvzkqBqkVxjI53DuxAVPqeTJWObKxXMsBSFHVnnYXuSkgL85ThpxRNQC9C-zBUaTEKP276FDfY5DEp7PGpINTwuSI2YjhsX6KGGrIvMBdy0l7n4pWemQrJlrW23IKql6gx4raU2F6lA2tz3TmS%7E4JusYDs3ofRv2jRgpbdj4k61x7RgovPFf8AmtPhjZeU15CZN7b7oQXzHrb8pGjAUGEUSbZW4lOu4QFTZxAs8iXm2vMgVR8n6j7OEkgO-jUmmaW9X8xpu75HeQ5gB7YtCjwsdKPMkFp3HQjJhBsNKlD8WPbhZB6Stu6tRwMITIcKIFDt9dLuw__&Key-Pair-Id=K2L8F4GPSG1IFC'
+DOWNLOAD_URL = 'https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-gguf/resolve/main/Phi-3-mini-4k-instruct-q4.gguf'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
