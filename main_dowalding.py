@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-gguf'
+WEBSITE_URL = 'https://files.scooterhacking.org/firmware/max/DRV/?utm_source=chatgpt.com'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-gguf/resolve/main/Phi-3-mini-4k-instruct-q4.gguf'
+DOWNLOAD_URL = 'https://files.scooterhacking.org/firmware/max/DRV/DRV126.zip'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
