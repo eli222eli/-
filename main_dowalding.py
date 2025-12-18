@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://files.scooterhacking.org/firmware/max/DRV/?utm_source=chatgpt.com'
+WEBSITE_URL = 'https://www.emuparadise.me/roms/search.php?query=eragon+iso+psp&amp;section=all'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://files.scooterhacking.org/firmware/max/DRV/DRV126.zip'
+DOWNLOAD_URL = 'https://www.emuparadise.me/PSP_ISOs/Eragon_(USA)/156441'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
