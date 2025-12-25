@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://tora1.com/2036'
+WEBSITE_URL = 'https://s15-kling.klingai.com/kimg/EMXN1y8qSQoGdXBsb2FkEg55bGFiLXN0dW50LXNncBova2xpbmcvZG93bmxvYWQvTWprNE5qYzJPREkxTlRBM09EZ3pPRFl4TXpnMk5qSXk.origin?x-kcdn-pid=112372'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://share.tora1.com/s/CyN3dLf848GXwZq/download'
+DOWNLOAD_URL = 'https://s15-kling.klingai.com/kimg/EMXN1y8qSQoGdXBsb2FkEg55bGFiLXN0dW50LXNncBova2xpbmcvZG93bmxvYWQvTWprNE5qYzJPREkxTlRBM09EZ3pPRFl4TXpnMk5qSXk.origin?x-kcdn-pid=112372'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
