@@ -12,7 +12,7 @@ WEBSITE_URL = 'https://huggingface.co/onlplab/alephbert-base/tree/main'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://huggingface.co/onlplab/alephbert-base/resolve/main/pytorch_model.bin?download=true'
+DOWNLOAD_URL = 'https://huggingface.co/onlplab/alephbert-base/resolve/main/config.json?download=true'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
