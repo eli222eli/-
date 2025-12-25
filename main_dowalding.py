@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://huggingface.co/onlplab/alephbert-base/tree/main'
+WEBSITE_URL = 'https://tora1.com/2036'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://tora1.com/2036'
+DOWNLOAD_URL = 'https://share.tora1.com/s/CyN3dLf848GXwZq/download'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
