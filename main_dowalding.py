@@ -8,11 +8,11 @@ import shutil
 
 
 # הקישור לאתר שממנו הגענו (Referer)
-WEBSITE_URL = 'https://www.emuparadise.me/roms/search.php?query=eragon+iso+psp&amp;section=all'
+WEBSITE_URL = 'https://huggingface.co/onlplab/alephbert-base/tree/main'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://www.emuparadise.me/PSP_ISOs/Eragon_(USA)/156441'
+DOWNLOAD_URL = 'https://huggingface.co/onlplab/alephbert-base/resolve/main/pytorch_model.bin?download=true'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
