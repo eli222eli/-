@@ -12,7 +12,7 @@ WEBSITE_URL = 'https://huggingface.co/onlplab/alephbert-base/tree/main'
 
 
 # הקישור לקובץ ההורדה
-DOWNLOAD_URL = 'https://huggingface.co/onlplab/alephbert-base/resolve/main/config.json?download=true'
+DOWNLOAD_URL = 'https://tora1.com/2036'
 
 
 # הורדת קבצים מהאנטרנט, יש למלא את הקישור של האתר וגם את הרישור של ההורדה
